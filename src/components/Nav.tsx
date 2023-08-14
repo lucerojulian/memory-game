@@ -6,9 +6,9 @@ const Nav = () => {
 
   return (
     <nav>
-      <div className="flex items-center px-2 justify-end">
+      <div className="flex items-center px-2 justify-end min-h-[31.96px]">
         {name && (
-          <p className="font-medium font-sans text-white">
+          <p className="font-medium font-sans text-white animate-slideIn">
             {name}
             <span className="font-black ml-2 mr-1 sm:ml-4 sm:mr-2">|</span>
             <button

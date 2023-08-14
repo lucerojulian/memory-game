@@ -15,7 +15,7 @@ const Home = () => {
   }
 
   return (
-    <section className="max-w-[400px] m-auto mt-12">
+    <section className="max-w-[400px] m-auto mt-4">
       <LogInForm onLogIn={onLogIn} />
     </section>
   );
