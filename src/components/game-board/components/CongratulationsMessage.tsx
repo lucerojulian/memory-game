@@ -31,8 +31,8 @@ const CongratulationsMessage: FC<Props> = ({ handleGoToMenu }) => {
           Go to menu
         </PrimaryButton>
       </div>
-      <div className="absolute w-screen left-[50vw]">
-        <ConfettiExplosion particleSize={12} particleCount={200} zIndex={20} />
+      <div className="fixed w-screen left-[50vw]">
+        <ConfettiExplosion particleSize={10} particleCount={150} zIndex={20} />
       </div>
     </>
   );
