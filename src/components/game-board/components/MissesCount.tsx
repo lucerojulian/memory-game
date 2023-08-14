@@ -6,7 +6,7 @@ interface Props {
 }
 
 const MissesCount: FC<Props> = ({ misses }) => {
-  const missesClasses = `sm:text-xl rounded flex items-center ${
+  const missesClasses = `rounded flex items-center ${
     misses > 0 ? 'shake-horizontal' : ''
   }`;
 

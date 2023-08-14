@@ -6,7 +6,6 @@ import { AnimalsResponse } from '../../models/apiAnimal';
 import { apiAnimalsToGameAnimals } from '../../adapters/apiAnimalsToGameAnimals';
 import { shuffleArray } from '../../utils/shuffleArray';
 import { DIFFICULTY } from '../../constants/gameDifficulty';
-import LeftArrowIcon from '../../shared/icons/LeftArrowIcon';
 import HitsCount from './components/HitsCount';
 import MissesCount from './components/MissesCount';
 import Countdown from '../../shared/display/countdown/Countdown';
@@ -15,6 +14,7 @@ import {
   ANIMALS_BY_DIFFICULTY,
   GAMEBOARD_GRID_BY_DIFFICULTY,
 } from './models/gameBoard.model';
+import LeftArrowIcon from '../../shared/icons/LeftArrowIcon';
 
 const COPY_UUID_SUFFIX = '-copy';
 
@@ -111,18 +111,20 @@ const GameBoard: FC<Props> = ({ difficulty, handleBackToMenu }) => {
   return (
     <>
       {win && <CongratulationsMessage handleGoToMenu={handleBackToMenu} />}
-      <button
-        type="button"
-        className="absolute flex items-center text-white font-sans top-2 left-4 underline p-2"
-        title="Back to difficulty menu"
-        onClick={handleBackToMenu}
-      >
-        <LeftArrowIcon className="h-3 mr-2 fill-white" />
-        Back to menu
-      </button>
-      <div className="flex flex-row justify-between mb-4 text-white font-semibold">
-        <HitsCount hits={hits} />
-        <MissesCount misses={misses} />
+      <div className="flex gap-4 items-center justify-between">
+        <button
+          type="button"
+          className="flex items-center text-white font-sans underline p-2"
+          title="Back to difficulty menu"
+          onClick={handleBackToMenu}
+        >
+          <LeftArrowIcon className="h-3 mr-2 fill-white" />
+          Menu
+        </button>
+        <div className="flex gap-4 text-white font-semibold">
+          <HitsCount hits={hits} />
+          <MissesCount misses={misses} />
+        </div>
       </div>
       <div className={gridClasses}>
         <Countdown />

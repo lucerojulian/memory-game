@@ -6,7 +6,7 @@ interface Props {
 }
 
 const HitsCount: FC<Props> = ({ hits }) => {
-  const hitsClasses = `sm:text-xl rounded flex items-center ${
+  const hitsClasses = `rounded flex items-center ${
     hits > 0 ? 'jello-horizontal' : ''
   }`;
 

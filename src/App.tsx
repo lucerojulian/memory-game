@@ -5,9 +5,11 @@ import Nav from './components/Nav';
 const App = () => {
   return (
     <Providers>
-      <main className="relative h-screen p-4 grid grid-rows-[auto,_auto,_1fr] overflow-hidden max-w-5xl m-auto">
+      <main className="relative h-screen grid grid-rows-[auto,_1fr] overflow-hidden max-w-5xl m-auto">
         <Nav />
-        <Router />
+        <main className="grid grid-rows-[auto,_1fr] gap-2 p-4">
+          <Router />
+        </main>
       </main>
     </Providers>
   );
