@@ -1,27 +1,64 @@
-# React + TypeScript + Vite
+# Memory game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The classic memory game.
 
-Currently, two official plugins are available:
+![Playing screen](src/assets/screenshots/play_screen.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Authors
 
-## Expanding the ESLint configuration
+- [@lucerojulian](https://www.github.com/lucerojulian)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+_React_ / _TypeScript_ / _TailwindCSS_ / _Vitest_
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Demo
+
+- [Github Pages](https://lucerojulian.github.io/memory-game)
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/lucerojulian/memory-game
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Go to the project directory
+
+```bash
+  cd memory-game
+```
+
+Install dependencies
+
+```bash
+  yarn
+```
+
+Run in development mode
+
+```bash
+  yarn dev
+```
+
+## Running Tests
+
+We use [Vitest](https://vitest.dev/) for the tests in this project
+
+To run tests, run the following command
+
+```bash
+  yarn test
+```
+
+## Deployment
+
+For the deployment are used [github pages](https://pages.github.com/) and [gh-pages](https://www.npmjs.com/package/gh-pages)
+
+To deploy this project run
+
+```bash
+  # this command runs yarn build and gh-pages -d dist
+  yarn deploy
+```
