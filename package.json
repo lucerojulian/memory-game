@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "yarn build && gh-pages -d dist",
     "format": "prettier --write ./src",
     "lint:ts": "tsc --noEmit && eslint src/**/*.ts{,x} --cache --max-warnings=0",
     "coverage": "vitest run --coverage",
