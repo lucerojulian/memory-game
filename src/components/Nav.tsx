@@ -11,7 +11,7 @@ const Nav = () => {
       </h1>
       {name && (
         <div className="absolute top-0 right-0 bottom-0 h-max ">
-          <p className="font-medium font-sans text-white p-2">
+          <p className="font-medium font-sans text-white px-2">
             {name}
             <span className="font-black ml-2 mr-1 sm:ml-4 sm:mr-2">|</span>
             <button
