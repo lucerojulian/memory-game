@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 const Providers: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/memory-game">
       <UserProvider>{children}</UserProvider>
     </BrowserRouter>
   );
