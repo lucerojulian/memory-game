@@ -1,0 +1,5 @@
+export enum DIFFICULTY {
+  EASY_MODE = 'EASY_MODE',
+  NORMAL_MODE = 'NORMAL_MODE',
+  HARD_MODE = 'HARD_MODE',
+}
