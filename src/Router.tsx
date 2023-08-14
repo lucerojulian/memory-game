@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
+import Spinner from './shared/display/Spinner';
 
 const LazyHomePage = lazy(() => import('./pages/Home.page'));
 const LazyPlayGamePage = lazy(() => import('./pages/PlayGame.page'));
@@ -10,7 +11,7 @@ const Router = () => {
       <Route
         path="/"
         element={
-          <Suspense fallback="loading...">
+          <Suspense fallback={<Spinner />}>
             <LazyHomePage />
           </Suspense>
         }
@@ -18,7 +19,7 @@ const Router = () => {
       <Route
         path="/play"
         element={
-          <Suspense fallback="loading...">
+          <Suspense fallback={<Spinner />}>
             <LazyPlayGamePage />
           </Suspense>
         }

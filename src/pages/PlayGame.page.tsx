@@ -3,6 +3,7 @@ import useUser from '../hooks/useUser';
 import { Suspense, lazy, useState } from 'react';
 import DifficultyMenu from '../components/DifficultyMenu';
 import { DIFFICULTY } from '../constants/gameDifficulty';
+import Spinner from '../shared/display/Spinner';
 
 const LazyGameBoard = lazy(() => import('../components/game-board/GameBoard'));
 
@@ -34,7 +35,7 @@ const PlayGamePage = () => {
     <>
       {showDifficultyMenu && <DifficultyMenu onChooseDifficulty={startGame} />}
       {showBoard && (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Spinner />}>
           <LazyGameBoard
             difficulty={difficulty}
             handleBackToMenu={handleBackToMenu}
