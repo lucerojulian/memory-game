@@ -17,11 +17,9 @@ describe('LoginForm', () => {
   it('should change input value when typing', () => {
     render(<LogInForm onLogIn={() => {}} />);
 
-    const nameInput = screen.queryByPlaceholderText(
-      /Enter your name/i,
-    ) as HTMLInputElement;
+    const nameInput = screen.queryByPlaceholderText(/Enter your name/i);
 
-    fireEvent.change(nameInput, { target: { value: 'julian' } });
+    fireEvent.change(nameInput!, { target: { value: 'julian' } });
     expect(nameInput).toHaveValue('julian');
   });
 
@@ -30,13 +28,11 @@ describe('LoginForm', () => {
 
     render(<LogInForm onLogIn={mockOnLogin} />);
 
-    const submitButton = screen.queryByText(/Play/) as HTMLButtonElement;
-    const nameInput = screen.queryByPlaceholderText(
-      /Enter your name/i,
-    ) as HTMLInputElement;
+    const submitButton = screen.queryByText(/Play/);
+    const nameInput = screen.queryByPlaceholderText(/Enter your name/i);
 
-    fireEvent.change(nameInput, { target: { value: 'julian' } });
-    fireEvent.click(submitButton);
+    fireEvent.change(nameInput!, { target: { value: 'julian' } });
+    fireEvent.click(submitButton!);
 
     expect(mockOnLogin).toHaveBeenCalledTimes(1);
   });
@@ -46,8 +42,8 @@ describe('LoginForm', () => {
 
     render(<LogInForm onLogIn={mockOnLogin} />);
 
-    const submitButton = screen.queryByText(/Play/) as HTMLButtonElement;
-    fireEvent.click(submitButton);
+    const submitButton = screen.queryByText(/Play/);
+    fireEvent.click(submitButton!);
 
     expect(mockOnLogin).toHaveBeenCalledTimes(0);
   });
