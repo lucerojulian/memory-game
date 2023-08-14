@@ -14,7 +14,7 @@ const Nav = () => {
             <button
               type="button"
               onClick={logout}
-              className="underline font-normal px-2 py-1 rounded hover:bg-white/10"
+              className="underline font-normal px-2 py-1"
               title="Log out"
             >
               Log out
