@@ -14,6 +14,7 @@ _React_ / _TypeScript_ / _TailwindCSS_ / _Vitest_
 
 ## Demo
 
+- [Vercel](https://memory-game-eight-zeta.vercel.app/)
 - [Github Pages](https://lucerojulian.github.io/memory-game)
 
 ## Run Locally
@@ -54,7 +55,7 @@ To run tests, run the following command
 
 ## Deployment
 
-For the deployment are used [github pages](https://pages.github.com/) and [gh-pages](https://www.npmjs.com/package/gh-pages)
+For the deployment are used [Vercel](https://vercel.com/), [Github pages](https://pages.github.com/) and [gh-pages](https://www.npmjs.com/package/gh-pages)
 
 To deploy this project run
 
