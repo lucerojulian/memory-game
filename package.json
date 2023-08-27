@@ -10,6 +10,7 @@
     "lint:ts": "tsc --noEmit && eslint src/**/*.ts{,x} --cache --max-warnings=0",
     "coverage": "vitest run --coverage",
     "test": "vitest",
+    "test:run": "vitest run",
     "test:related": "jest --bail --findRelatedTests",
     "preview": "vite preview",
     "prepare": "husky install"
@@ -36,7 +37,6 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "husky": "^8.0.3",
     "jsdom": "^22.1.0",
-    "lint-staged": "^13.2.3",
     "postcss": "^8.4.27",
     "prettier": "^3.0.1",
     "sass": "^1.65.1",
@@ -44,9 +44,5 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vitest": "^0.34.1"
-  },
-  "lint-staged": {
-    "src/**/*.{js,ts,jsx,tsx}": "yarn run lint:ts",
-    "*./src": "prettier --write"
   }
 }
