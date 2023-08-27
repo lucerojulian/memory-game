@@ -14,7 +14,7 @@ _React_ / _TypeScript_ / _TailwindCSS_ / _Vitest_
 
 ## Demo
 
-- [Vercel](https://memory-game-eight-zeta.vercel.app/)
+- [Vercel](https://memory-game-lucerojulian.vercel.app/)
 
 ## Run Locally
 
