@@ -1,4 +1,4 @@
-import Router from './Router';
+import Router from './router/Router';
 import Providers from './providers/Providers';
 import Nav from './components/Nav';
 
