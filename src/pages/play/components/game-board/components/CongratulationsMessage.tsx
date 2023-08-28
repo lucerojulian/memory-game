@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import PrimaryButton from '../../../shared/controls/PrimaryButton';
+import PrimaryButton from '../../../../../shared/controls/PrimaryButton';
 import ConfettiExplosion from 'react-confetti-explosion';
-import TrophyIcon from '../../../shared/icons/TrophyIcon';
-import useUser from '../../../hooks/useUser';
+import TrophyIcon from '../../../../../shared/icons/TrophyIcon';
+import useUser from '../../../../../hooks/useUser';
 
 interface Props {
   handleGoToMenu: () => void;

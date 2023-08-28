@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import LogInForm from '../../components/login-form/LoginForm';
+import LogInForm from '../../pages/home/components/login-form/LoginForm';
 
 describe('LoginForm', () => {
   it('should render required elements to log in', () => {

@@ -1,8 +1,8 @@
 import { Navigate, useNavigate } from 'react-router-dom';
-import useUser from '../hooks/useUser';
-import LogInForm from '../components/login-form/LoginForm';
+import useUser from '../../hooks/useUser';
+import LogInForm from './components/login-form/LoginForm';
 
-const Home = () => {
+export const HomePage = () => {
   const navigate = useNavigate();
   const { name } = useUser();
 
@@ -21,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

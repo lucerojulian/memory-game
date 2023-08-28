@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import CheckIcon from '../../../shared/icons/CheckIcon';
+import CheckIcon from '../../../../../shared/icons/CheckIcon';
 
 interface Props {
   hits: number;

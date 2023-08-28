@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import DifficultyMenuView from './DifficultyMenuView';
-import { GameModeKey } from '../../models/gameDifficulty.model';
+import { GameModeKey } from '../../../../models/gameDifficulty.model';
 
 interface Props {
   onChooseDifficulty: (mode: GameModeKey) => void;

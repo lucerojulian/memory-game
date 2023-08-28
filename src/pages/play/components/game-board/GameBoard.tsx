@@ -1,20 +1,20 @@
 import { FC, useEffect, useMemo, useState } from 'react';
 import AnimalCard from '../animal-card/AnimalCard';
-import { GameAnimal } from '../../models/gameAnimal.model';
-import { useFetch } from '../../hooks/useFetch';
-import { AnimalsResponse } from '../../models/apiAnimal.model';
-import { apiAnimalsToGameAnimals } from '../../adapters/apiAnimalsToGameAnimals';
-import { shuffleArray } from '../../utils/shuffleArray';
+import { GameAnimal } from '../../../../models/gameAnimal.model';
+import { useFetch } from '../../../../hooks/useFetch';
+import { AnimalsResponse } from '../../../../models/apiAnimal.model';
+import { apiAnimalsToGameAnimals } from '../../../../adapters/apiAnimalsToGameAnimals';
+import { shuffleArray } from '../../../../utils/shuffleArray';
 import HitsCount from './components/HitsCount';
 import MissesCount from './components/MissesCount';
-import Countdown from '../../shared/display/countdown/Countdown';
+import Countdown from '../../../../shared/display/countdown/Countdown';
 import CongratulationsMessage from './components/CongratulationsMessage';
 import {
   ANIMALS_BY_GAME_MODE,
   GAMEBOARD_GRID_BY_GAME_MODE,
 } from './models/gameBoard.model';
-import LeftArrowIcon from '../../shared/icons/LeftArrowIcon';
-import { GameModeKey } from '../../models/gameDifficulty.model';
+import LeftArrowIcon from '../../../../shared/icons/LeftArrowIcon';
+import { GameModeKey } from '../../../../models/gameDifficulty.model';
 
 const COPY_UUID_SUFFIX = '-copy';
 

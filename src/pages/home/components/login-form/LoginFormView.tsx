@@ -1,5 +1,5 @@
 import { FormEvent } from 'react';
-import PrimaryButton from '../../shared/controls/PrimaryButton';
+import PrimaryButton from '../../../../shared/controls/PrimaryButton';
 
 type Props = {
   onSubmit(_event: FormEvent<HTMLFormElement>): void;

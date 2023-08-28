@@ -1,11 +1,13 @@
-import { GAME_MODES } from '../../models/gameDifficulty.model';
-import BlueButton from '../../shared/controls/BlueButton';
-import LimeButton from '../../shared/controls/LimeButton';
-import RedButton from '../../shared/controls/RedButton';
+import { GAME_MODES } from '../../../../models/gameDifficulty.model';
+import BlueButton from '../../../../shared/controls/BlueButton';
+import LimeButton from '../../../../shared/controls/LimeButton';
+import RedButton from '../../../../shared/controls/RedButton';
 
 type Props = {
   onClick(_event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void;
 };
+
+const { EASY_MODE, HARD_MODE, NORMAL_MODE } = GAME_MODES;
 
 const DifficultyMenuView = ({ onClick }: Props) => {
   return (
@@ -14,13 +16,13 @@ const DifficultyMenuView = ({ onClick }: Props) => {
         Choose the mode to play:
       </h2>
       <div className="flex flex-col gap-2">
-        <LimeButton name={GAME_MODES.EASY_MODE} onClick={onClick}>
+        <LimeButton name={EASY_MODE} onClick={onClick}>
           🙂 Easy
         </LimeButton>
-        <BlueButton name={GAME_MODES.NORMAL_MODE} onClick={onClick}>
+        <BlueButton name={NORMAL_MODE} onClick={onClick}>
           😎 Normal
         </BlueButton>
-        <RedButton name={GAME_MODES.HARD_MODE} onClick={onClick}>
+        <RedButton name={HARD_MODE} onClick={onClick}>
           🤪 Hard
         </RedButton>
       </div>

@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { USER_NAME_LS_KEY } from '../../constants/localStorageKeys';
-import useUser from '../../hooks/useUser';
-import { UserState } from '../../providers/userProvider/UserProvider.model';
-import { localStorageSaveItem } from '../../utils/localStorage';
+import { USER_NAME_LS_KEY } from '../../../../constants/localStorageKeys';
+import useUser from '../../../../hooks/useUser';
+import { UserState } from '../../../../providers/userProvider/UserProvider.model';
+import { localStorageSaveItem } from '../../../../utils/localStorage';
 import { LoginFormView } from './LoginFormView';
 
 interface Props {

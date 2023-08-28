@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import CloseIcon from '../../../shared/icons/CloseIcon';
+import CloseIcon from '../../../../../shared/icons/CloseIcon';
 
 interface Props {
   misses: number;
