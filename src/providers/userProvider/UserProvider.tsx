@@ -6,14 +6,14 @@ import {
   initialUserState,
 } from './UserProvider.model';
 import { localStorageGetItem } from '../../utils/localStorage';
-import { UserNameLSKey } from '../../constants/localStorageKeys';
+import { USER_NAME_LS_KEY } from '../../constants/localStorageKeys';
 import { useNavigate } from 'react-router-dom';
 
 export const Context = createContext<UserContext>(initialUserContext);
 
 const UserProvider: FC<PropsWithChildren> = ({ children }) => {
   const [state, setState] = useState<UserState>(
-    localStorageGetItem(UserNameLSKey) || initialUserState,
+    localStorageGetItem(USER_NAME_LS_KEY) || initialUserState,
   );
 
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ const UserProvider: FC<PropsWithChildren> = ({ children }) => {
 
   const logout = () => {
     setState(initialUserState);
-    localStorage.removeItem(UserNameLSKey);
+    localStorage.removeItem(USER_NAME_LS_KEY);
     navigate('/');
   };
 

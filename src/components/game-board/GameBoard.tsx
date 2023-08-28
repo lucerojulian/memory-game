@@ -1,25 +1,25 @@
 import { FC, useEffect, useMemo, useState } from 'react';
 import AnimalCard from '../animal-card/AnimalCard';
-import { GameAnimal } from '../../models/gameAnimal';
+import { GameAnimal } from '../../models/gameAnimal.model';
 import { useFetch } from '../../hooks/useFetch';
-import { AnimalsResponse } from '../../models/apiAnimal';
+import { AnimalsResponse } from '../../models/apiAnimal.model';
 import { apiAnimalsToGameAnimals } from '../../adapters/apiAnimalsToGameAnimals';
 import { shuffleArray } from '../../utils/shuffleArray';
-import { DIFFICULTY } from '../../constants/gameDifficulty';
 import HitsCount from './components/HitsCount';
 import MissesCount from './components/MissesCount';
 import Countdown from '../../shared/display/countdown/Countdown';
 import CongratulationsMessage from './components/CongratulationsMessage';
 import {
-  ANIMALS_BY_DIFFICULTY,
-  GAMEBOARD_GRID_BY_DIFFICULTY,
+  ANIMALS_BY_GAME_MODE,
+  GAMEBOARD_GRID_BY_GAME_MODE,
 } from './models/gameBoard.model';
 import LeftArrowIcon from '../../shared/icons/LeftArrowIcon';
+import { GameModeKey } from '../../models/gameDifficulty.model';
 
 const COPY_UUID_SUFFIX = '-copy';
 
 interface Props {
-  difficulty: keyof typeof DIFFICULTY;
+  difficulty: GameModeKey;
   handleBackToMenu: () => void;
 }
 
@@ -34,7 +34,7 @@ const GameBoard: FC<Props> = ({ difficulty, handleBackToMenu }) => {
 
   const API_URL =
     'https://fed-team.modyo.cloud/api/content/spaces/animals/types/game/entries?per_page=' +
-    ANIMALS_BY_DIFFICULTY[difficulty];
+    ANIMALS_BY_GAME_MODE[difficulty];
 
   const { data, loading } = useFetch<AnimalsResponse>(API_URL);
 
@@ -98,7 +98,7 @@ const GameBoard: FC<Props> = ({ difficulty, handleBackToMenu }) => {
     );
   };
 
-  const gridClasses = `relative h-full w-full grid gap-2 ${GAMEBOARD_GRID_BY_DIFFICULTY[difficulty]}`;
+  const gridClasses = `relative h-full w-full grid gap-2 ${GAMEBOARD_GRID_BY_GAME_MODE[difficulty]}`;
 
   useEffect(() => {
     const timer = setTimeout(() => {

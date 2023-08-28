@@ -1,1 +1,1 @@
-export const UserNameLSKey = 'userName';
+export const USER_NAME_LS_KEY = 'userName';

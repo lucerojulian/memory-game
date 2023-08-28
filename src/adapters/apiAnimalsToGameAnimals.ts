@@ -1,5 +1,5 @@
-import { GameAnimal } from '../models/gameAnimal';
-import { AnimalEntry } from '../models/apiAnimal';
+import { GameAnimal } from '../models/gameAnimal.model';
+import { AnimalEntry } from '../models/apiAnimal.model';
 
 export const apiAnimalsToGameAnimals = (
   animals: AnimalEntry[],

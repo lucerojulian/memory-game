@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import DifficultyMenu from '../../components/DifficultyMenu';
+import DifficultyMenu from '../../components/difficulty-menu/DifficultyMenu';
 
 describe('LoginForm', () => {
   it('should render all difficulty options', () => {

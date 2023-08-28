@@ -1,6 +1,6 @@
 import { Navigate, useNavigate } from 'react-router-dom';
 import useUser from '../hooks/useUser';
-import LogInForm from '../components/LogInForm';
+import LogInForm from '../components/login-form/LoginForm';
 
 const Home = () => {
   const navigate = useNavigate();

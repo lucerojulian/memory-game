@@ -1,8 +1,8 @@
 import { Navigate } from 'react-router-dom';
 import useUser from '../hooks/useUser';
 import { Suspense, lazy, useState } from 'react';
-import DifficultyMenu from '../components/DifficultyMenu';
-import { DIFFICULTY } from '../constants/gameDifficulty';
+import DifficultyMenu from '../components/difficulty-menu/DifficultyMenu';
+import { GAME_MODES, GameModeKey } from '../models/gameDifficulty.model';
 import Spinner from '../shared/display/Spinner';
 
 const LazyGameBoard = lazy(() => import('../components/game-board/GameBoard'));
@@ -10,13 +10,13 @@ const LazyGameBoard = lazy(() => import('../components/game-board/GameBoard'));
 const PlayGamePage = () => {
   const [showBoard, setShowBoard] = useState<boolean>(false);
   const [showDifficultyMenu, setShowDifficultyMenu] = useState<boolean>(true);
-  const [difficulty, setDifficulty] = useState<keyof typeof DIFFICULTY>(
-    DIFFICULTY.EASY_MODE,
+  const [difficulty, setDifficulty] = useState<GameModeKey>(
+    GAME_MODES.EASY_MODE,
   );
 
   const { name } = useUser();
 
-  const startGame = (mode: keyof typeof DIFFICULTY) => {
+  const startGame = (mode: GameModeKey) => {
     setDifficulty(mode);
     setShowBoard(true);
     setShowDifficultyMenu(false);

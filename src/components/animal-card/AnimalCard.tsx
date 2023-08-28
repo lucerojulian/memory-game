@@ -1,13 +1,13 @@
 import { FC } from 'react';
-import { GameAnimal } from '../../models/gameAnimal';
+import { GameAnimal } from '../../models/gameAnimal.model';
 import './animalCard.scss';
-import { DIFFICULTY } from '../../constants/gameDifficulty';
+import { GameModeKey } from '../../models/gameDifficulty.model';
 
 interface Props {
   animal: GameAnimal;
   isFlipped: boolean;
   onClick: (animal: GameAnimal) => void;
-  difficulty: keyof typeof DIFFICULTY;
+  difficulty: GameModeKey;
 }
 
 const AnimalCard: FC<Props> = (props) => {
