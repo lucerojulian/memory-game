@@ -4,7 +4,6 @@ import { GameAnimal } from '../../../../models/gameAnimal.model';
 import { useFetch } from '../../../../hooks/useFetch';
 import { AnimalsResponse } from '../../../../models/apiAnimal.model';
 import { apiAnimalsToGameAnimals } from '../../../../adapters/apiAnimalsToGameAnimals';
-import { shuffleArray } from '../../../../utils/shuffleArray';
 import HitsCount from './components/HitsCount';
 import MissesCount from './components/MissesCount';
 import Countdown from '../../../../shared/display/countdown/Countdown';
@@ -15,6 +14,7 @@ import {
 } from './models/gameBoard.model';
 import LeftArrowIcon from '../../../../shared/icons/LeftArrowIcon';
 import { GameModeKey } from '../../../../models/gameDifficulty.model';
+import { shuffleArray } from './utils/shuffleArray';
 
 const COPY_UUID_SUFFIX = '-copy';
 

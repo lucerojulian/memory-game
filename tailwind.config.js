@@ -7,12 +7,12 @@ export default {
         slideInEllipticTopFwd: {
           '0%': {
             transform: 'translateY(-600px) rotateX(-30deg) scale(0)',
-            transformorigin: '50% 100%',
+            transformOrigin: '50% 100%',
             opacity: '0',
           },
           '100%': {
             transform: 'translateY(0) rotateX(0) scale(1)',
-            transformorigin: '50% 1400px',
+            transformOrigin: '50% 1400px',
             opacity: '1',
           },
         },
