@@ -10,7 +10,7 @@ import Countdown from '../../../../shared/display/countdown/Countdown';
 import CongratulationsMessage from './components/CongratulationsMessage';
 import {
   ANIMALS_BY_GAME_MODE,
-  GAMEBOARD_GRID_BY_GAME_MODE,
+  BOARD_GRID_BY_GAME_MODE,
 } from './models/gameBoard.model';
 import LeftArrowIcon from '../../../../shared/icons/LeftArrowIcon';
 import { GameModeKey } from '../../../../models/gameDifficulty.model';
@@ -30,7 +30,7 @@ const GameBoard: FC<Props> = ({ difficulty, handleBackToMenu }) => {
   const [allVisible, setAllVisible] = useState<boolean>(true);
 
   const [currentFlipped, setCurrentFlipped] = useState<string[]>([]);
-  const [flippledCards, setFlippledCards] = useState<string[]>([]);
+  const [flippedCards, setFlippedCards] = useState<string[]>([]);
 
   const API_URL =
     'https://fed-team.modyo.cloud/api/content/spaces/animals/types/game/entries?per_page=' +
@@ -66,10 +66,9 @@ const GameBoard: FC<Props> = ({ difficulty, handleBackToMenu }) => {
       removeSuffixFromUuid(currentFlipped[0]) === removeSuffixFromUuid(uuid)
     ) {
       setHits((prevHits) => prevHits + 1);
-      setFlippledCards((prevFlippledCards) => [...prevFlippledCards, name]);
+      setFlippedCards((prevFlippedCards) => [...prevFlippedCards, name]);
       setCurrentFlipped([]);
-      if (flippledCards.length + 1 === memoizedShuffledAnimals.length / 2) {
-        console.log('ganaste');
+      if (flippedCards.length + 1 === memoizedShuffledAnimals.length / 2) {
         onWin();
       }
     } else if (
@@ -93,12 +92,12 @@ const GameBoard: FC<Props> = ({ difficulty, handleBackToMenu }) => {
   const isFlipped = (animal: GameAnimal) => {
     return (
       allVisible ||
-      flippledCards.includes(animal.name) ||
+      flippedCards.includes(animal.name) ||
       currentFlipped.includes(animal.uuid)
     );
   };
 
-  const gridClasses = `relative h-full w-full grid gap-2 ${GAMEBOARD_GRID_BY_GAME_MODE[difficulty]}`;
+  const gridClasses = `relative h-full w-full grid gap-2 ${BOARD_GRID_BY_GAME_MODE[difficulty]}`;
 
   useEffect(() => {
     const timer = setTimeout(() => {

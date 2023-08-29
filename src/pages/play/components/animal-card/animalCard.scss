@@ -17,7 +17,7 @@
     transform: rotateY(180deg);
   }
 
-  @mixin defaulCardSide {
+  @mixin defaultCardSide {
     border: 2px solid rgba($color: #fff, $alpha: 1);
     border-radius: 8px;
     backface-visibility: hidden;
@@ -30,13 +30,13 @@
   }
 
   &__front {
-    @include defaulCardSide;
+    @include defaultCardSide;
 
     transform: rotateY(180deg);
   }
 
   &__back {
-    @include defaulCardSide;
+    @include defaultCardSide;
 
     font-weight: bold;
     font-size: 3rem;
