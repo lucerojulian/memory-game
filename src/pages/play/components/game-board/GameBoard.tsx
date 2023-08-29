@@ -1,9 +1,9 @@
 import { FC, useEffect, useMemo, useState } from 'react';
 import AnimalCard from '../animal-card/AnimalCard';
-import { GameAnimal } from '../../../../models/gameAnimal.model';
+import { GameAnimal } from './models/gameAnimal.model';
 import { useFetch } from '../../../../hooks/useFetch';
-import { AnimalsResponse } from '../../../../models/apiAnimal.model';
-import { apiAnimalsToGameAnimals } from '../../../../adapters/apiAnimalsToGameAnimals';
+import { AnimalsResponse } from './models/apiAnimal.model';
+import { createGameAnimal } from './adapters/createGameAnimal.adapter';
 import HitsCount from './components/HitsCount';
 import MissesCount from './components/MissesCount';
 import Countdown from '../../../../shared/display/countdown/Countdown';
@@ -43,7 +43,7 @@ const GameBoard: FC<Props> = ({ difficulty, handleBackToMenu }) => {
   };
 
   const memoizedShuffledAnimals = useMemo(() => {
-    const animals = apiAnimalsToGameAnimals(data?.entries || []);
+    const animals = createGameAnimal(data?.entries || []);
     const animalsWithCopies = animals
       .map((animal) => ({
         ...animal,

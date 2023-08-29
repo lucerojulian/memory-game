@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { GameAnimal } from '../../../../models/gameAnimal.model';
+import { GameAnimal } from '../game-board/models/gameAnimal.model';
 import './animalCard.scss';
 import { GameModeKey } from '../../../../models/gameDifficulty.model';
 
